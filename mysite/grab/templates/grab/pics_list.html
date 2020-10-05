@@ -1,0 +1,24 @@
+{% load static %}
+
+<html>
+	<head>
+		<title>I'm pic list</title>
+		
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+		<link rel="stylesheet" href="{% static 'css/grab.css' %}">
+	</head>
+	
+	<body>
+	
+		<p>What's going on?!</p>
+		
+		{% for pic in pics %}
+			<p>published: {{ pic.published_date }}</p>
+			<h4>{{ pic.author }}</h4>
+			<p>{{ pic.name|linebreaksbr }}</p>
+		{% endfor %}
+		
+	</body>
+</html>
